@@ -2,20 +2,45 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>OLA APP</title>
+<title>Ola cabs</title>
 
 </head>
-<body>
-<h1>Task 1:WELCOME TO OLA CABS </h1>
-<h3>Login</h3>
+<body style="background-color:tomato;">
+<center><h1>WELCOME TO OLA CABS </h1> </center>
+<center><h3>LOGIN</h3></center>
 <br />
-<form>
-<label for="number">Enter the Number</label>
-<input type="number" name="Mobile number" id="Mobile number" placeholder="Enter valid mobile number" required> <br />
-<label for="Password">Password</label>
-<input type="Password" name="Password" id="password" placeholder="Enter valid password required"> <br />
-<button>SUBMIT</button>
+<form onsubmit="login()">
+<label for="Username">Username:</label>
+<input type="text" name="Username" id="Username" placeholder="Enter name" required autofocus> 
 <br />
+<label for="Password">Password:</label>
+<input type="Password" name="Password" id="password" placeholder="Enter valid password" required >
+<br />
+<button type="Submit">Submit</button>
+<br />
+<button type="reset">Reset</button>
+<br />
+<button type="button" onclick="hello()">Click me</button>"
+<br />
+</form>
+<script>
+function login(){
+    event.preventDefault();
+    alert("Login button clicked");
+    let username=document.querySelector("#username").value;
+    alert("Username:"+ username);
+    if(username=="admin" && username.length>=8){
+        alert("Login Success");
+    }
+    else{
+        alert("Invalid login credentials")
+    }
+
+}
+function hello(){
+    alert("Hello")
+}
+</script>
 <a href="second.html">"Nextpage"</a>
 </form>
 </body>
